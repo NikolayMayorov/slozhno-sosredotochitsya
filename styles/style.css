@@ -18,29 +18,28 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: left;
+	/* height: 100%; */
 
 	/* padding-inline-start: clamp(10px, 2.6vi, 20px);
 	padding-inline-end: clamp(10px, 2.6vi, 20px); */
 
-	margin: 0 auto;
-
+	/* margin: 0 auto; */
 }
 
 .decorated-zone {
 	position: relative;
-	height: 100vh;
+	/* height: inherit; */
+
+	/* height: 100vh; */
 	/* margin-block-start: clamp(10px, 2vi, 20px);
 	margin-inline-start: clamp(10px, 2vi, 20px);
 	margin-inline-end: clamp(10px, 2vi, 20px); */
-
-	/* padding: 20px; */
 }
 
 .rec {
 	position: absolute;
 	margin-top: -6px;
 	top: clamp(10px, 0.2vi, 20px);
-
 	/* сделать гибко!!!! */
 	right: 30px;
 }
@@ -61,8 +60,8 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(3, min-content);
 	gap: clamp(65px, 17vi, 173px);
-	/* padding-bottom: clamp(66px, 12vw, 183px); */
-	/* height: 100vh; */
+	padding-bottom: clamp(66px, 12vw, 183px);
+	height: 100vh;
 	min-height: 667px;
 }
 
@@ -74,7 +73,7 @@
 	line-height: 82.5%;
 }
 
-.header__title::before {
+.header::before {
 	content: '';
 	inline-size: 25px;
 	block-size: 25px;
@@ -82,11 +81,11 @@
 	background: transparent;
 	border-top: 1px solid var(--accent-color, #ff0070);
 	border-right: 1px solid var(--accent-color, #ff0070);
-	top: 0px;
-	right: 0px;
+	top: clamp(10px, 2.6vi, 20px);
+	right: 0;
 }
 
-.header__title::after {
+.header::after {
 	content: '';
 	inline-size: 25px;
 	block-size: 25px;
@@ -94,12 +93,7 @@
 	background: transparent;
 	border-bottom: 1px solid var(--accent-color, #ff0070);
 	border-left: 1px solid var(--accent-color, #ff0070);
-	/* bottom: 2.5vi; 
-		left: 0px;
-		*/
-	/* bottom: 1.5vh;
-		bottom: 1.5vh;*/
-	bottom: 0;
+	bottom: clamp(10px, 2.6vi, 20px);
 	left: 0;
 }
 
@@ -160,7 +154,7 @@
 }
 
 .content-container {
-	margin-top: 10px;
+	margin-top: 0 auto;
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -197,7 +191,7 @@
 	align-items: center;
 }
 
-.main__title::before {
+/* .main__title::before {
 	content: '';
 	inline-size: 25px;
 	block-size: 25px;
@@ -207,9 +201,9 @@
 	border-right: 1px solid var(--accent-color, #ff0070);
 	top: 0px;
 	right: 0px;
-}
+} */
 
-.main__title::after {
+/* .main__title::after {
 	content: '';
 	inline-size: 25px;
 	block-size: 25px;
@@ -217,14 +211,9 @@
 	background: transparent;
 	border-bottom: 1px solid var(--accent-color, #ff0070);
 	border-left: 1px solid var(--accent-color, #ff0070);
-	/* bottom: 2.5vi; 
-		left: 0px;
-		*/
-	/* bottom: 1.5vh;
-		bottom: 1.5vh;*/
 	bottom: 0;
 	left: 0;
-}
+} */
 
 @media (prefers-color-scheme: light) {
 	/* !!!!!!!!!!!!!!!! */

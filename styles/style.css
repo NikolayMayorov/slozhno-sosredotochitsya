@@ -28,20 +28,12 @@
 
 .decorated-zone {
 	position: relative;
-	/* height: inherit; */
-
-	/* height: 100vh; */
-	/* margin-block-start: clamp(10px, 2vi, 20px);
-	margin-inline-start: clamp(10px, 2vi, 20px);
-	margin-inline-end: clamp(10px, 2vi, 20px); */
 }
 
 .rec {
 	position: absolute;
-	margin-top: -6px;
-	top: clamp(10px, 0.2vi, 20px);
-	/* сделать гибко!!!! */
-	right: 30px;
+	top: calc(clamp(10px, 2.6vi, 20px) + 0.3em);
+	right: 1.7em;
 }
 
 .rec::after {
@@ -51,7 +43,7 @@
 	border-radius: 100%;
 	position: absolute;
 	background-color: var(--accent-color, #ff0070);
-	top: 3px;
+	top: 0.1em;
 	right: -23px;
 }
 

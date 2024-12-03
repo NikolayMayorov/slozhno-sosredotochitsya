@@ -1,5 +1,276 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+	background-color: var(--bg-color, #000028);
+	margin: 0 auto;
+	inline-size: 100%;
+	min-inline-size: 375px;
+	max-inline-size: 1024px;
+	color: var(--text-color, #000028);
+	font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 130%;
+	background-image: url(/images/cover-image-dark.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: left;
+
+	/* padding-inline-start: clamp(10px, 2.6vi, 20px);
+	padding-inline-end: clamp(10px, 2.6vi, 20px); */
+
+	margin: 0 auto;
+
+}
+
+.decorated-zone {
+	position: relative;
+	height: 100vh;
+	/* margin-block-start: clamp(10px, 2vi, 20px);
+	margin-inline-start: clamp(10px, 2vi, 20px);
+	margin-inline-end: clamp(10px, 2vi, 20px); */
+
+	/* padding: 20px; */
+}
+
+.rec {
+	position: absolute;
+	margin-top: -6px;
+	top: clamp(10px, 0.2vi, 20px);
+
+	/* сделать гибко!!!! */
+	right: 30px;
+}
+
+.rec::after {
+	content: '';
+	inline-size: 12px;
+	block-size: 12px;
+	border-radius: 100%;
+	position: absolute;
+	background-color: var(--accent-color, #ff0070);
+	top: 3px;
+	right: -23px;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, min-content);
+	gap: clamp(65px, 17vi, 173px);
+	/* padding-bottom: clamp(66px, 12vw, 183px); */
+	/* height: 100vh; */
+	min-height: 667px;
+}
+
+.main__title {
+	color: var(--title-color, #db00ff);
+	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+	font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+	line-height: 82.5%;
+}
+
+.header__title::before {
+	content: '';
+	inline-size: 25px;
+	block-size: 25px;
+	position: absolute;
+	background: transparent;
+	border-top: 1px solid var(--accent-color, #ff0070);
+	border-right: 1px solid var(--accent-color, #ff0070);
+	top: 0px;
+	right: 0px;
+}
+
+.header__title::after {
+	content: '';
+	inline-size: 25px;
+	block-size: 25px;
+	position: absolute;
+	background: transparent;
+	border-bottom: 1px solid var(--accent-color, #ff0070);
+	border-left: 1px solid var(--accent-color, #ff0070);
+	/* bottom: 2.5vi; 
+		left: 0px;
+		*/
+	/* bottom: 1.5vh;
+		bottom: 1.5vh;*/
+	bottom: 0;
+	left: 0;
+}
+
+.header__text {
+	inline-size: clamp(355px, 47vw, 491px);
+	justify-self: flex-end;
+	margin-block-start: -10px;
+}
+
+.title-decor {
+	background-color: var(--accent-color, #ff0070);
+	font-weight: 700;
+	/* text-align: left; */
+	text-wrap: pretty;
+}
+
+.header__theme-menu {
+	justify-self: end;
+	padding-block-start: clamp(65px, 17vi, 173px);
+}
+
+.header__theme-menu-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.rec,
+.header__theme-menu-item {
+	color: var(--accent-color, #ff0070);
+	line-height: 100%;
+}
+
+.header__theme-menu-button {
+	background: none;
+	border: none;
+	text-transform: lowercase;
+	padding: 4px 13px;
+}
+
+.header__theme-menu-button:hover {
+	/* сделать курсор */
+}
+
+.header__theme-menu-button:focus-visible {
+	/* сделать курсор */
+}
+
+.header__theme-menu-button_type_light {
+}
+
+.header__theme-menu-button_active {
+	border: 1px solid var(--accent-color, #ff0070);
+	pointer-events: none;
+}
+
+.header__theme-menu-button_type_auto {
+}
+
+.content-container {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.header__theme-menu-button_type_dark {
+}
+
+.content_main_heading {
+	color: var(--accent-color, #ff0070);
+	font-weight: 700;
+	margin-block-start: 50px;
+	font-size: 18px;
+}
+
+.content_second_heading {
+	margin-block-start: 20px;
+}
+
+.content_third_heading {
+	font-weight: 400;
+}
+
+.content__text {
+	color: var(--content-text-color, #f1b2ce);
+}
+
+.content__images {
+	max-width: 100%;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__title::before {
+	content: '';
+	inline-size: 25px;
+	block-size: 25px;
+	position: absolute;
+	background: transparent;
+	border-top: 1px solid var(--accent-color, #ff0070);
+	border-right: 1px solid var(--accent-color, #ff0070);
+	top: 0px;
+	right: 0px;
+}
+
+.main__title::after {
+	content: '';
+	inline-size: 25px;
+	block-size: 25px;
+	position: absolute;
+	background: transparent;
+	border-bottom: 1px solid var(--accent-color, #ff0070);
+	border-left: 1px solid var(--accent-color, #ff0070);
+	/* bottom: 2.5vi; 
+		left: 0px;
+		*/
+	/* bottom: 1.5vh;
+		bottom: 1.5vh;*/
+	bottom: 0;
+	left: 0;
+}
+
+@media (prefers-color-scheme: light) {
+	/* !!!!!!!!!!!!!!!! */
+}
+
+@media (width >= 768px) {
+	.header {
+		gap: clamp(65px, 23vi, 173px);
+		padding-bottom: clamp(65px, 25vi, 183px);
+	}
+
+	.header__title {
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	}
+
+	.header__theme-menu {
+		padding-block-start: clamp(65px, 23vi, 173px);
+	}
+
+	.header__title {
+		margin-inline-start: -20px;
+	}
+}
+
+@media (width >= 1024px) {
+	.header {
+		gap: clamp(65px, 15vi, 173px);
+		padding-bottom: clamp(66px, 14vw, 183px);
+	}
+
+	.header__text {
+		inline-size: clamp(355px, 50vw, 491px);
+		margin-block-start: -40px;
+	}
+
+	.header__theme-menu {
+		justify-self: center;
+		padding-block-start: 0;
+	}
+
+	.header__theme-menu-list {
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	.header__title {
+		margin-block-start: 115px;
+	}
 }

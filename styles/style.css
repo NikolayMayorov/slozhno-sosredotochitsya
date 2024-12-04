@@ -59,11 +59,13 @@
 	width: 100%;
 	grid-template-columns: 100%;
 	/* grid-template-rows: repeat(3, auto); */
-	grid-template-rows: 1fr min-content 1fr;
+	/* grid-template-rows: 1fr min-content 1fr; */
+	grid-template-rows: 1fr auto 1fr;
 	justify-items: center;
 	height: 100vh;
 	min-height: 667px;
-	margin-block-end: 40px;
+	/* margin-block-end: 40px; */
+	margin-block-end: clamp(40px, 11vi, 60px);
 }
 
 .header__title {
@@ -106,13 +108,13 @@
 	inline-size: clamp(355px, 47vw, 491px);
 	block-size: min-content;
 	margin-block-end: clamp(10px, 2vi, 20px);
-	/* justify-self: flex-end; */
 }
 
 .title-decor {
 	background-color: var(--accent-color, #ff0070);
 	font-weight: 700;
 	text-wrap: pretty;
+	text-align: left;
 }
 
 .header__theme-menu {
@@ -157,31 +159,57 @@
 .header__theme-menu-button_type_auto {
 }
 
+.header__theme-menu-button_type_dark {
+}
+
 .content-container {
 	margin-top: 0;
 	margin-left: clamp(10px, 2.6vi, 20px);
 	margin-right: clamp(10px, 2.6vi, 20px);
+	display: flex;
+	flex-direction: column;
+	gap: clamp(50px, 20vi, 80px);
 }
 
-.header__theme-menu-button_type_dark {
+.article {
+	display: grid;
+	gap: 20px;
 }
 
-.content_main_heading {
+.article__title {
 	color: var(--accent-color, #ff0070);
 	font-weight: 700;
 	/* margin-block-start: 50px; */
 	font-size: 18px;
 }
 
-.content_second_heading {
-	margin-block-start: 20px;
+.article__content-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
-.content_third_heading {
+.article__content-list-item {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.article__content-list-item-title {
+	/* !!!?????? */
+	line-height: 23.4px;
+	block-size: min-content;
+}
+
+.article__content-list-item-subtitle {
 	font-weight: 400;
 }
 
-.content__text {
+.content__third_heading {
+	font-weight: 400;
+}
+
+.article__content-list-item-text {
 	color: var(--content-text-color, #f1b2ce);
 }
 
@@ -204,6 +232,11 @@
 	font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
 	line-height: 82.5%;
 	justify-self: flex-start;
+}
+
+
+.special-text{
+	
 }
 
 @media (prefers-color-scheme: light) {
@@ -261,15 +294,4 @@
 }
 
 @media (orientation: landscape) {
-}
-
-.tempHeader {
-	text-shadow: 4px 4px 0px #ff0070;
-
-	font-weight: 700;
-	line-height: 82.5%; /* 95.7px */
-}
-
-.tempFooter {
-	text-shadow: 2px 2px 0px #ff0070;
 }

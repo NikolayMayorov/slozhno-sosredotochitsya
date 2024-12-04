@@ -4,9 +4,7 @@
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 	background-color: var(--bg-color, #000028);
 	margin: 0 auto;
-	inline-size: 100%;
-	min-inline-size: 375px;
-	max-inline-size: 1024px;
+	/* max-inline-size: 1024px; */
 	color: var(--text-color, #000028);
 	font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
 	font-size: 18px;
@@ -18,16 +16,11 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: left;
-	/* height: 100%; */
-
-	/* padding-inline-start: clamp(10px, 2.6vi, 20px);
-	padding-inline-end: clamp(10px, 2.6vi, 20px); */
-
-	/* margin: 0 auto; */
 }
 
 .decorated-zone {
 	position: relative;
+	width: 100%;
 }
 
 .rec {
@@ -38,31 +31,48 @@
 
 .rec::after {
 	content: '';
-	inline-size: 12px;
-	block-size: 12px;
+	/* inline-size: 12px;
+	block-size: 12px; */
+	inline-size: 0.6em;
+	block-size: 0.6em;
 	border-radius: 100%;
 	position: absolute;
 	background-color: var(--accent-color, #ff0070);
 	top: 0.1em;
-	right: -23px;
+	right: -1.3em;
+}
+
+.theme-menu-container {
+	display: flex;
+	align-items: center;
+	justify-self: flex-end;
+}
+
+.flex-end {
+	display: flex;
+	align-items: center;
+	justify-self: flex-end;
 }
 
 .header {
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(3, min-content);
-	gap: clamp(65px, 17vi, 173px);
-	padding-bottom: clamp(66px, 12vw, 183px);
+	width: 100%;
+	grid-template-columns: 100%;
+	/* grid-template-rows: repeat(3, auto); */
+	grid-template-rows: 1fr min-content 1fr;
+	justify-items: center;
 	height: 100vh;
 	min-height: 667px;
 }
 
-.main__title {
+.header__title {
 	color: var(--title-color, #db00ff);
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 	font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
 	line-height: 82.5%;
+	justify-self: flex-start;
+	/* margin-bottom: 20px; */
 }
 
 .header::before {
@@ -91,20 +101,20 @@
 
 .header__text {
 	inline-size: clamp(355px, 47vw, 491px);
+	block-size: min-content;
+	margin-block-end: clamp(10px, 2vi, 20px);
+
 	justify-self: flex-end;
-	margin-block-start: -10px;
 }
 
 .title-decor {
 	background-color: var(--accent-color, #ff0070);
 	font-weight: 700;
-	/* text-align: left; */
 	text-wrap: pretty;
 }
 
 .header__theme-menu {
-	justify-self: end;
-	padding-block-start: clamp(65px, 17vi, 173px);
+	padding-block-start: clamp(10px, 2vi, 15px);
 }
 
 .header__theme-menu-list {
@@ -147,8 +157,8 @@
 
 .content-container {
 	margin-top: 0 auto;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: clamp(10px, 2.6vi, 20px);
+	margin-right: clamp(10px, 2.6vi, 20px);
 }
 
 .header__theme-menu-button_type_dark {
@@ -157,7 +167,7 @@
 .content_main_heading {
 	color: var(--accent-color, #ff0070);
 	font-weight: 700;
-	margin-block-start: 50px;
+	/* margin-block-start: 50px; */
 	font-size: 18px;
 }
 
@@ -183,7 +193,7 @@
 	align-items: center;
 }
 
-/* .main__title::before {
+/* .header__title::before {
 	content: '';
 	inline-size: 25px;
 	block-size: 25px;
@@ -195,7 +205,7 @@
 	right: 0px;
 } */
 
-/* .main__title::after {
+/* .header__title::after {
 	content: '';
 	inline-size: 25px;
 	block-size: 25px;
@@ -213,37 +223,38 @@
 
 @media (width >= 768px) {
 	.header {
-		gap: clamp(65px, 23vi, 173px);
-		padding-bottom: clamp(65px, 25vi, 183px);
+		/* gap: clamp(65px, 23vi, 173px); */
+		/* min-height: 768px; */
 	}
 
 	.header__title {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+		margin-inline-start: -20px;
 	}
 
 	.header__theme-menu {
-		padding-block-start: clamp(65px, 23vi, 173px);
-	}
-
-	.header__title {
-		margin-inline-start: -20px;
+		/* padding-block-start: clamp(75px, 25vi, 192px); */
 	}
 }
 
 @media (width >= 1024px) {
+	.theme-menu-container {
+		justify-self: center;
+	}
+
 	.header {
-		gap: clamp(65px, 15vi, 173px);
-		padding-bottom: clamp(66px, 14vw, 183px);
+		/* gap: clamp(65px, 15vi, 173px); */
+		/* padding-bottom: clamp(66px, 14vw, 183px); */
 	}
 
 	.header__text {
 		inline-size: clamp(355px, 50vw, 491px);
-		margin-block-start: -40px;
+		/* margin-block-start: -60px; */
 	}
 
 	.header__theme-menu {
-		justify-self: center;
-		padding-block-start: 0;
+		padding-block-start: 20px;
+		align-self: flex-start;
 	}
 
 	.header__theme-menu-list {
@@ -252,6 +263,9 @@
 	}
 
 	.header__title {
-		margin-block-start: 115px;
+		/* margin-block-start: 115px; */
 	}
+}
+
+@media (orientation: landscape) {
 }

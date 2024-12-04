@@ -168,7 +168,7 @@
 	margin-right: clamp(10px, 2.6vi, 20px);
 	display: flex;
 	flex-direction: column;
-	gap: clamp(50px, 20vi, 80px);
+	gap: clamp(50px, 10vi, 80px);
 }
 
 .article {
@@ -197,8 +197,9 @@
 
 .article__content-list-item-title {
 	/* !!!?????? */
-	line-height: 23.4px;
+	/* line-height: 23.4px; */
 	block-size: min-content;
+	font-size: 18px;
 }
 
 .article__content-list-item-subtitle {
@@ -234,9 +235,9 @@
 	justify-self: flex-start;
 }
 
-
-.special-text{
-	
+.special-text {
+	text-shadow: 2px 2px 0 var(--content-text-color, #f1b2ce);
+	text-decoration: underline;
 }
 
 @media (prefers-color-scheme: light) {

@@ -211,6 +211,9 @@
 
 .article__content-list-item-text {
 	color: var(--content-text-color, #f1b2ce);
+	/* text-align: left;
+	margin: 0;
+	padding: 0; */
 }
 
 .gallery {
@@ -279,7 +282,7 @@
 	}
 
 	.article:nth-child(odd) {
-		grid-template-columns: 1fr 1.85fr;
+		grid-template-columns: 1fr 2fr;
 	}
 
 	.figures-container {

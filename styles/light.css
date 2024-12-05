@@ -4,17 +4,26 @@
   переключая тему
 */
 
-
 :root.theme-light {
-  /* Переменные светлой темы */    
+	/* Переменные светлой темы */
+	--accent-color: #ff0070;
+	--bg-color: #000028;
+	--text-color: #000028;
+	--main-font: 'IBM Plex Mono', sans-serif;
+	--title-color: #db00ff;
 }
 
 /* Остальные стили */
 
 @media (prefers-color-scheme: light) {
-:root {
-      /* Дублируем переменные светлой темы */    
-  }
+	:root {
+		/* Дублируем переменные светлой темы */
+		--accent-color: #ff0070;
+		--bg-color: #000028;
+		--text-color: #000028;
+		--main-font: 'IBM Plex Mono', sans-serif;
+		--title-color: #db00ff;
+	}
 }
 
 .page.theme_light {

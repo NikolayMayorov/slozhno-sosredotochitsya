@@ -140,14 +140,13 @@
 }
 
 .header__theme-menu-button:hover {
-	/* сделать курсор */
+	/* !!!!!! */
+	pointer-events: visible;
 }
 
 .header__theme-menu-button:focus-visible {
-	/* сделать курсор */
-}
-
-.header__theme-menu-button_type_light {
+	/* !!!!!  */
+	cursor: pointer;
 }
 
 .header__theme-menu-button_active {
@@ -155,11 +154,11 @@
 	pointer-events: none;
 }
 
-.header__theme-menu-button_type_auto {
+/* .header__theme-menu-button_type_auto {
 }
 
 .header__theme-menu-button_type_dark {
-}
+} */
 
 .content-container {
 	display: flex;
@@ -199,8 +198,6 @@
 .article__content-list-item-title {
 	box-sizing: border-box;
 	font-size: 18px;
-	/* !!!?????? */
-	/* line-height: 23.4px; */
 	block-size: min-content;
 }
 

@@ -5,12 +5,18 @@
 */
 
 :root.theme-dark {
+	--btn-menu-color: #ff0070;
 	--accent-color: #ff0070;
-	--bg-color: #000028;
-	--text-color: #000028;
-	--main-font: 'IBM Plex Mono', sans-serif;
+	--article__title: #ff0070;
 	--title-color: #db00ff;
+	--title-decor-bg-color: #ff0070;
+	--bg-color: #000028;
+	--text-color: #f1b2ce;
+	--main-font: 'IBM Plex Mono', sans-serif;
+	--sub-title-color: #000028;
+	--decoration-elem-color: #ff0070;
 }
+
 
 .page.theme_dark {
 	/* сохраните этот селектор в приведённом виде.
@@ -19,4 +25,8 @@
   */
 
 	background-image: url(/images/cover-image-dark.png);
+}
+
+.page.theme_dark .rec {
+	display: block;
 }

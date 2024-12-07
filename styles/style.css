@@ -28,6 +28,8 @@
 	position: absolute;
 	top: calc(clamp(10px, 2.6vi, 20px) + 0.3em);
 	right: 1.7em;
+	color: var(--decoration-elem-color, #ff0070);
+	line-height: 100%;
 }
 
 .rec::after {
@@ -114,6 +116,7 @@
 	font-weight: 700;
 	text-align: left;
 	background-color: var(--title-decor-bg-color, #ff0070);
+	color: var(--header-text-color, #000028);
 	text-wrap: pretty;
 }
 
@@ -125,11 +128,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-}
-
-.rec {
-	color: var(--decoration-elem-color, #ff0070);
-	line-height: 100%;
 }
 
 .header__theme-menu-item {

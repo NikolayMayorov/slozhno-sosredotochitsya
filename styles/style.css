@@ -48,7 +48,7 @@
 	align-items: center;
 }
 
-.flex-end {
+.container_right-position {
 	display: flex;
 	justify-self: flex-end;
 	align-items: center;

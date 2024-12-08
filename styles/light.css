@@ -44,3 +44,25 @@
 .page.theme_light .rec {
 	display: none;
 }
+
+@media (prefers-color-scheme: light) {
+	.page {
+		--btn-menu-color: #353430;
+		--accent-color: #ff8dcb;
+		--article__title: #353430;
+		--title-color: #ffc2e6;
+		--title-decor-bg-color: #ff8dcb;
+		--bg-color: #fff1f7;
+		--text-color: #353430;
+		--header-text-color: #353430;
+		--main-font: 'IBM Plex Mono', sans-serif;
+		--sub-title-color: #353430;
+		--decoration-elem-color: #353430;
+
+		background-image: url(/images/cover-image-light.png);
+	}
+
+	.page.theme_light .rec {
+		display: none;
+	}
+}

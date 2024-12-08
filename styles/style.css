@@ -262,7 +262,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-	.page.theme_light {
+	.page {
 		--btn-menu-color: #353430;
 		--accent-color: #ff8dcb;
 		--article__title: #353430;
@@ -278,7 +278,7 @@
 		background-image: url(/images/cover-image-light.png);
 	}
 
-	.page.theme_light .rec {
+	.page .rec {
 		display: none;
 	}
 }

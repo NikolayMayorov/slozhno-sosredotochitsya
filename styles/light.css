@@ -6,17 +6,6 @@
 
 :root.theme-light {
 	/* Переменные светлой темы */
-	/* --btn-menu-color: #353430;
-	--accent-color: #ff0070;
-	--article__title: #353430;
-	--title-color: #ffc2e6;
-	--title-decor-bg-color: #ff8dcb;
-	--bg-color: #fff1f7;
-	--text-color: #353430;
-		--header-text-color: #353430;
-	--main-font: 'IBM Plex Mono', sans-serif;
-	--sub-title-color: #353430;
-	--decoration-elem-color: #353430; */
 }
 
 /* Остальные стили */
@@ -47,7 +36,7 @@
 @media (prefers-color-scheme: light) {
 	.page {
 		--menu-btn-font-color: #353430;
-		--text-shadow-color: #ff8dcb;
+		--text-shadow-color: #ff0070;
 		--article-title-color: #353430;
 		--main-title-color: #ffc2e6;
 		--decoration-title-bg-color: #ff8dcb;
@@ -61,7 +50,7 @@
 		background-image: url(/images/cover-image-light.png);
 	}
 
-	.page.theme_light .rec {
+	.rec {
 		display: none;
 	}
 }

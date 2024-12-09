@@ -4,7 +4,7 @@
   переключая тему
 */
 
-:root.page.theme-dark {
+:root.page.___theme-dark {
 	--btn-menu-color: #ff0070;
 	--accent-color: #ff0070;
 	--article__title: #ff0070;
@@ -15,6 +15,45 @@
 	--header-text-color: #000028;
 	--sub-title-color: #000028;
 	--decoration-elem-color: #ff0070;
+	--shining-color: #ff007099;
+	--btn-menu-border-color: #ff007066; /* #FF0070 — цвет, 66 — прозрачность 40% */
+}
+
+/* temp */
+:root.page.theme-dark {
+	/* --btn-menu-color: #ff0070; */
+	--menu-btn-font-color: #ff0070;
+
+	/* --accent-color: #ff0070; */
+	--text-shadow-color: #ff0070;
+
+	/* --article__title: #ff0070; */
+	--article-title-color: #ff0070;
+
+	/* --title-color: #db00ff; */
+	--main-title-color: #db00ff;
+
+	--decoration-title-bg-color: #ff0070;
+
+	/* --bg-color: #000028; */
+	--main-bg-color: #000028;
+
+	/* --text-color: #f1b2ce; */
+	--common-text-color: #f1b2ce;
+
+	/* --header-text-color: #000028; */
+	--article-header-text-color: #000028;
+
+	/* --sub-title-color: #000028; */
+	/* !!!!!!! */
+	--article-sub-title-color: #000028;
+
+	--decoration-elem-color: #ff0070;
+
+	/* --shining-color: #ff007099; */
+	--decoration-elem-shining-color: #ff007099;
+
+	--menu-btn-border-color: #ff007066; /* #FF0070 — цвет, 66 — прозрачность 40% */
 }
 
 .page.theme_dark {
@@ -32,6 +71,40 @@
 	--header-text-color: #000028;
 	--sub-title-color: #000028;
 	--decoration-elem-color: #ff0070;
+
+	/* --btn-menu-color: #ff0070; */
+	--menu-btn-font-color: #ff0070;
+
+	/* --accent-color: #ff0070; */
+	--text-shadow-color: #ff0070;
+
+	/* --article__title: #ff0070; */
+	--article-title-color: #ff0070;
+
+	/* --title-color: #db00ff; */
+	--main-title-color: #db00ff;
+
+	--decoration-title-bg-color: #ff0070;
+
+	/* --bg-color: #000028; */
+	--main-bg-color: #000028;
+
+	/* --text-color: #f1b2ce; */
+	--common-text-color: #f1b2ce;
+
+	/* --header-text-color: #000028; */
+	--article-header-text-color: #000028;
+
+	/* --sub-title-color: #000028; */
+	/* !!!!!!! */
+	--article-sub-title-color: #000028;
+
+	--decoration-elem-color: #ff0070;
+
+	/* --shining-color: #ff007099; */
+	--decoration-elem-shining-color: #ff007099;
+
+	--menu-btn-border-color: #ff007066; /* #FF0070 — цвет, 66 — прозрачность 40% */
 
 	background-image: url(/images/cover-image-dark.png);
 }

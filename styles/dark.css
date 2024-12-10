@@ -4,21 +4,6 @@
   переключая тему
 */
 
-:root.page.theme-dark {
-	--menu-btn-font-color: #ff0070;
-	--text-shadow-color: #ff0070;
-	--article-title-color: #ff0070;
-	--main-title-color: #db00ff;
-	--decoration-title-bg-color: #ff0070;
-	--main-bg-color: #000028;
-	--common-text-color: #f1b2ce;
-	--article-header-text-color: #000028;
-	--article-sub-title-color: #000028;
-	--decoration-elem-color: #ff0070;
-	--decoration-elem-shining-color: #ff007099;
-	--menu-btn-border-color: #ff007066;
-}
-
 .page.theme_dark {
 	/* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

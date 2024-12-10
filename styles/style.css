@@ -23,10 +23,10 @@
 }
 
 .rec {
-	display: block;
 	position: absolute;
 	top: calc(clamp(10px, 2.6vi, 20px) + 0.3em);
 	right: 1.7em;
+	display: block;
 	color: var(--decoration-elem-color, #ff0070);
 	line-height: 100%;
 }
@@ -37,10 +37,10 @@
 	top: 0.1em;
 	right: -1.3em;
 	border-radius: 100%;
+	box-shadow: 0 0 3px 3px var(--decoration-elem-shining-color, #ff007099);
 	background-color: var(--decoration-elem-color, #ff0070);
 	inline-size: 0.6em;
 	block-size: 0.6em;
-	box-shadow: 0 0 3px 3px var(--decoration-elem-shining-color, #ff007099);
 }
 
 .theme-menu-container {
@@ -106,10 +106,10 @@
 }
 
 .title-decor {
+	color: var(--article-header-text-color, #000028);
 	font-weight: 700;
 	text-align: left;
 	background-color: var(--decoration-title-bg-color, #ff0070);
-	color: var(--article-header-text-color, #000028);
 	text-wrap: pretty;
 }
 
@@ -144,14 +144,14 @@
 .header__theme-menu-button {
 	border: none;
 	padding: 4px 13px;
+	color: var(--menu-btn-font-color, #ff0070);
 	text-transform: lowercase;
 	background: none;
-	color: var(--menu-btn-font-color, #ff0070);
 }
 
 .header__theme-menu-button:hover {
-	cursor: pointer;
 	border: 1px solid var(--menu-btn-border-color, #ff007066);
+	cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -220,12 +220,13 @@
 	display: grid;
 	grid-auto-flow: row;
 	gap: clamp(10px, 2.6vi, 20px);
-	margin-block-end: 40px;
+	margin-block-end: clamp(40px, 7vi, 60px);
 }
 
 .figures-container {
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 	gap: clamp(10px, 2.6vi, 20px);
 	box-sizing: border-box;
 }
@@ -233,9 +234,11 @@
 .gallery__item {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 .gallery__image {
+	display: block;
 	margin: 0;
 	padding: 0;
 	object-fit: cover;

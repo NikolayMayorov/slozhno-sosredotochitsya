@@ -280,11 +280,11 @@
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
 
-	.two-column {
+	.article-wrapper {
 		grid-template-columns: 1fr 2fr;
 	}
 
-	.one-column .article__title {
+	.article-unit .article__title {
 		max-inline-size: 30%;
 	}
 

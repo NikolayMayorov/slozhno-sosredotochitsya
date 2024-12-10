@@ -26,7 +26,7 @@
 	--article-sub-title-color: #353430;
 	--decoration-elem-color: #353430;
 	--menu-btn-border-color: #35343066;
-	background-image: url(/images/cover-image-light.png);
+	background-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .rec {
@@ -47,7 +47,7 @@
 		--decoration-elem-color: #353430;
 		--menu-btn-border-color: #35343066;
 
-		background-image: url(/images/cover-image-light.png);
+		background-image: url(../images/cover-image-light.png);
 	}
 
 	.rec {

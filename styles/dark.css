@@ -38,7 +38,7 @@
 	--decoration-elem-shining-color: #ff007099;
 	--menu-btn-border-color: #ff007066;
 
-	background-image: url(/images/cover-image-dark.png);
+	background-image: url(../images/cover-image-dark.png);
 }
 
 .page.theme_dark .rec {

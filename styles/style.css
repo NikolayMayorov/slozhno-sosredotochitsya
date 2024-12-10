@@ -130,7 +130,7 @@
 
 .link {
 	text-decoration: none;
-	text-shadow: 2px 2px 0 var(--text-shadow-color, #f1b2ce);
+	text-shadow: 2px 2px 0 var(--text-shadow-color, #ff0070);
 }
 
 .link:hover {
